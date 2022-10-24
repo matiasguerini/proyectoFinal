@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.btn {
+  display: flex;
+  width: 100%;
+  color: white;
+  background-color: rgb(255, 52, 52);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1em;
+  padding: 1em 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -72,7 +83,6 @@ body {
   background-color: white;
 }
 .header .container {
-  justify-content: space-between;
   align-items: center;
 }
 .header .container .logo {
@@ -87,27 +97,33 @@ body {
   font-size: 35px;
   display: none;
 }
+.header .container .nav {
+  width: 100%;
+}
 .header .container .nav.active {
   right: 0%;
+  width: 100%;
 }
 .header .container .nav .nav__list {
   display: flex;
   text-align: end;
   gap: 2em;
+  width: 100%;
+  justify-content: space-around;
 }
 .header .container .nav .nav__list .nav__link {
   margin: 1em 0;
-  min-width: 200px;
   text-align: center;
+  width: 100%;
 }
 .header .container .nav .nav__list .nav__link a {
   color: black;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 .header .container .nav .nav__list .nav__link a:hover {
   font-weight: bold;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .header .container {
     justify-content: space-between;
     align-items: center;
@@ -206,7 +222,7 @@ body {
   background-size: cover;
   background-position: 0 -200px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .main.home, .main.productos, .main.faq, .main.ofertas, .main.contacto {
     height: 400px;
   }
@@ -250,7 +266,7 @@ body {
     text-align: center;
   }
   .main.ofertas {
-    background-position: 0 0;
+    background-position: 0 0px;
   }
   .main.contacto {
     background-position: 0 0;
@@ -318,13 +334,14 @@ body {
   flex-flow: row wrap;
   align-items: center;
   gap: 5em;
+  justify-content: space-between;
 }
 .faqs .container .faq__container {
   display: flex;
   flex-flow: row wrap;
   padding: 50px 0;
   gap: 3em;
-  max-width: 60%;
+  max-width: 50%;
 }
 .faqs .container .faq__container .faq__item {
   width: 100%;
@@ -336,14 +353,16 @@ body {
   padding-top: 5px;
 }
 .faqs .container img {
-  width: 400px;
+  width: auto;
+  width: 40%;
   height: 600px;
   object-fit: cover;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .faqs h2 {
     margin: 0 10%;
     line-height: 1em;
+    text-align: center;
   }
   .faqs .container {
     flex-direction: row;
@@ -356,11 +375,12 @@ body {
     flex-flow: row wrap;
     padding: 50px 0;
     gap: 3em;
-    max-width: 100%;
+    max-width: 100% !important;
   }
   .faqs .container .faq__container .faq__item {
-    width: 100%;
+    max-width: 100%;
     display: flex;
+    gap: 0;
     font-size: 1em;
     text-align: center;
   }
@@ -368,12 +388,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.2em;
+    width: 100%;
   }
   .faqs .container .faq__container .faq__item i {
     display: none;
   }
   .faqs .container img {
-    width: 300px;
+    min-width: 300px;
+    width: 100%;
     height: 600px;
     object-fit: cover;
   }
@@ -404,7 +426,7 @@ body {
 .section__contacto .container form textarea {
   padding: 0.5em;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .section__contacto .container {
     flex-direction: column;
   }
@@ -478,7 +500,29 @@ body {
   object-fit: cover;
   height: 214px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
+  .galeria .container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 25px 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .galeria .container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 25px 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .galeria .container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 25px 15px;
+  }
   .galeria .container .card {
     grid-column: inherit !important;
     grid-row: inherit !important;

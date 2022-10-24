@@ -58,7 +58,7 @@
     background-size: cover;
     background-position: 0 -200px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     &.home {
       height: 400px;
       .container {
@@ -100,7 +100,7 @@
       }
     }
     &.ofertas {
-      background-position: 0 0;
+      background-position: 0 0px;
     }
     &.contacto {
       background-position: 0 0;
