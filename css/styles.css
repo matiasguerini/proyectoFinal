@@ -414,6 +414,8 @@ body {
 }
 .section__contacto .container form {
   display: flex;
+  width: 100%;
+  max-width: 500px;
   flex-direction: column;
   height: 100%;
 }
