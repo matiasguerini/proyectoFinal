@@ -1,0 +1,25 @@
+.section__proveedores {
+  padding: 100px 0;
+  .container {
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      @include h2;
+      line-height: 1em;
+      text-align: center;
+    }
+    .proveedores__container {
+      padding-top: 50px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 25px;
+      img {
+        width: 100px;
+        filter: grayscale(100);
+        opacity: 70%;
+      }
+    }
+  }
+}

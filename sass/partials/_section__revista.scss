@@ -1,0 +1,20 @@
+.section__revista {
+  padding: 100px 0;
+  background-color: rgb(248, 248, 248);
+  h2 {
+    @include h2;
+    text-align: center;
+  }
+  .container {
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    flex-flow: row wrap;
+    gap: 50px;
+  }
+}
+.section__ofertas {
+  @extend .section__revista;
+  padding:0;
+}

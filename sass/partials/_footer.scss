@@ -1,0 +1,38 @@
+.footer {
+  background-color: map-get($colores, color-secundario);
+  .container {
+    justify-content: space-between;
+    p {
+      text-align: center;
+      color: white;
+    }
+    .iconos {
+      display: flex;
+      gap: 1em;
+      .container {
+        display: flex;
+        gap: 1em;
+        margin: 0;
+        padding: 0;
+      }
+      i {
+        font-size: 1.5em;
+        color: white;
+      }
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 1em;
+      .iconos {
+        flex-direction: column;
+        .container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
